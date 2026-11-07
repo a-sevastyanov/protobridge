@@ -11,14 +11,14 @@ find_package(Protobuf REQUIRED)
 # исполняемый файл, а также называет его.
 add_executable(receiver
     ${CMAKE_CURRENT_SOURCE_DIR}/receiver.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/proto/user.pb.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/../proto/user.pb.cc
 )
 
 # Где искать заголовочные файлы (.hpp, .pb.h) при компиляции.
 # Полезно, если они лежат не в той же папке, что и .cpp.
 target_include_directories(receiver PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/proto
+    ${CMAKE_CURRENT_SOURCE_DIR}/..
     ${Protobuf_INCLUDE_DIRS}
 )
 
