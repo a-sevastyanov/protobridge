@@ -52,7 +52,7 @@ int main()
     }
 
     listen(server_fd, 1);
-    std::cout << "Listening on port 5000!" << std::endl;
+    std::cout << "Server listening on port 5000!" << std::endl;
 
     int conn_fd = accept(server_fd, nullptr, nullptr);
     if (conn_fd == -1) {
